@@ -129,6 +129,15 @@ dmypy.json
 *.swo
 *~
 
+# === Frontend (React/Vite) ===
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# === Backend (Flask) ===
+backend/__pycache__/
+backend/.env
+
 # OS
 .DS_Store
 Thumbs.db
