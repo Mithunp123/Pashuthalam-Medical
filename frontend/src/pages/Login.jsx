@@ -147,14 +147,14 @@ export default function Login() {
       {/* Signup Modal */}
       {mode === 'signup' && (
         <div className="modal" onClick={() => setMode(null)}>
-          <div className="modal-content" onClick={e => e.stopPropagation()}>
+          <div className="modal-content signup-modal-content" onClick={e => e.stopPropagation()}>
             <button className="close-btn" onClick={() => setMode(null)}>&times;</button>
             <div className="form-header">
               <h2>Create Account</h2>
               <p>Join thousands of medical shops using Pashuthalam</p>
             </div>
             {error && <div className="message error">{error}</div>}
-            <form onSubmit={handleSignup}>
+            <form onSubmit={handleSignup} className="signup-form-scroll">
               <div className="form-group">
                 <label><i className="fas fa-phone"></i> Mobile Number</label>
                 <input type="tel" placeholder="Enter your mobile number" value={signupData.mobile_no}
